@@ -17,14 +17,16 @@ body {
 @import url('https://fonts.cdnfonts.com/css/monaco');
 
 h1 {
-    font-size: clamp(1.5rem, 4vw, 2rem);
+    font-size: 16px;
     margin-bottom: 1rem;
     font-family: 'Monaco', monospace;
+    color: #ff4d79;
 }
 
 h2 {
-    font-size: clamp(1.2rem, 3vw, 1.5rem);
+    font-size: 14px;
     font-family: 'Monaco', monospace;
+    color: #ff6b8b;
 }
 
 button {
@@ -32,7 +34,7 @@ button {
 }
 
 p {
-    font-size: clamp(0.9rem, 2.5vw, 1rem);
+    font-size: 12px;
 }
 
 #puzzle-game, #proposal-content, #benefits-content, #thank-you {
@@ -107,10 +109,12 @@ p {
 }
 
 .benefits-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    display: flex;
+    flex-direction: column;
     gap: 20px;
     padding: 20px;
+    max-width: 600px;
+    margin: 0 auto;
 }
 
 .benefit-section {
@@ -156,12 +160,13 @@ p {
 .benefit-section h2 {
     color: #ff6b8b;
     margin-bottom: 10px;
-    font-size: 1.3rem;
+    font-size: 1rem;
 }
 
 .benefit-section p {
     color: #666;
     line-height: 1.5;
+    font-size: 0.8rem;
 }
 
 .benefit-image {
@@ -300,23 +305,24 @@ p {
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    max-width: 600px;
+    max-width: 200px;
     margin: 20px auto;
     padding: 20px;
+    gap: 20px;
 }
 
 .heart-zone {
-    width: 100px;
-    height: 100px;
+    width: 80px;
+    height: 80px;
     border: 2px dashed #e3687b;
-    border-radius: 10px;
+    border-radius: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
 #heart {
-    font-size: 40px;
+    font-size: 45px;
     cursor: grab;
     user-select: none;
 }
@@ -327,21 +333,45 @@ p {
 
 #swipe-instruction {
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     margin-bottom: 20px;
     gap: 10px;
+    position: relative;
 }
 
-.arrow {
-    font-size: 24px;
-    animation: arrowMove 1.5s infinite;
+.swipe-bar {
+    width: 120px;
+    height: 5px;
+    background: rgba(227, 104, 123, 0.3);
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+}
+
+.swipe-progress {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 30%;
+    background: #e3687b;
+    border-radius: 10px;
+    animation: swipeProgress 2s infinite;
+}
+
+.swipe-text {
+    font-size: 12px;
     color: #e3687b;
+    opacity: 0.8;
+    margin-top: 5px;
 }
 
-@keyframes arrowMove {
-    0%, 100% { transform: translateX(0); }
-    50% { transform: translateX(-10px); }
+@keyframes swipeProgress {
+    0% { transform: translateX(-100%); }
+    50% { transform: translateX(300%); }
+    100% { transform: translateX(-100%); }
 }
 
 .thank-you-text {
