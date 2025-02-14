@@ -1,11 +1,46 @@
-
-    <div className="flex items-center justify-center h-screen bg-blue-100">
-      <div className="bg-white p-6 rounded-2xl shadow-lg border-4 border-blue-500 text-center">
-        <h1 className="text-2xl font-bold text-blue-600">
-          Kamu kalo haus butuhnya
-        </h1>
-        <p className="text-3xl font-extrabold text-blue-800 mt-2">
-          AQUA atau <span className="text-blue-500">AQUAja</span> 💧😆
-        </p>
-      </div>
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ChatGPT Profile</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #bfdbfe;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            background: white;
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            border: 4px solid #3b82f6;
+            text-align: center;
+        }
+        h1 {
+            color: #2563eb;
+            font-size: 24px;
+        }
+        p {
+            color: #1e40af;
+            font-size: 28px;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+        .highlight {
+            color: #3b82f6;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Kamu kalo haus butuhnya</h1>
+        <p>AQUA atau <span class="highlight">AQUAja</span> 💧😆</p>
     </div>
+</body>
+</html>
