@@ -94,14 +94,14 @@ document.addEventListener('DOMContentLoaded', function() {
         setInterval(() => {
             const heartSparkle = document.createElement('div');
             heartSparkle.className = 'heart-sparkle';
-            heartSparkle.innerHTML = '❤️';
+            heartSparkle.innerHTML = '🩷';
             heartSparkle.style.left = Math.random() * 80 + 10 + 'vw';
             heartSparkle.style.bottom = '0';
             document.body.appendChild(heartSparkle);
 
             const sparkle = document.createElement('div');
             sparkle.className = 'sparkle';
-            sparkle.innerHTML = '❤️';
+            sparkle.innerHTML = '💖';
             sparkle.style.left = Math.random() * 80 + 10 + 'vw';
             sparkle.style.top = Math.random() * 80 + 10 + 'vh';
             document.body.appendChild(sparkle);
